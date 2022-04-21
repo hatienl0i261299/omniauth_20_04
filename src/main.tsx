@@ -10,7 +10,7 @@ const msalConfig = {
     auth: {
         clientId: "d6d460e0-82e1-4e1b-a9ae-aa9cfac0997f",
         authority: "https://login.microsoftonline.com/common",
-        redirectUri: "http://localhost:3000/"
+        redirectUri: "http://localhost:3001/"
     },
     cache: {
         cacheLocation: "localStorage", // This configures where your cache will be stored
@@ -18,25 +18,25 @@ const msalConfig = {
     },
     system: {
         loggerOptions: {
-            loggerCallback: (level: any, message: any, containsPii: any) => {
-                if (containsPii) {
-                    return;
-                }
-                switch (level) {
-                    case LogLevel.Error:
-                        console.error(message);
-                        return;
-                    case LogLevel.Info:
-                        console.info(message);
-                        return;
-                    case LogLevel.Verbose:
-                        console.debug(message);
-                        return;
-                    case LogLevel.Warning:
-                        console.warn(message);
-                        return;
-                }
-            }
+            // loggerCallback: (level: any, message: any, containsPii: any) => {
+            //     if (containsPii) {
+            //         return;
+            //     }
+            //     switch (level) {
+            //         case LogLevel.Error:
+            //             console.error(message);
+            //             return;
+            //         case LogLevel.Info:
+            //             console.info(message);
+            //             return;
+            //         case LogLevel.Verbose:
+            //             console.debug(message);
+            //             return;
+            //         case LogLevel.Warning:
+            //             console.warn(message);
+            //             return;
+            //     }
+            // }
         }
     }
 };
